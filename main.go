@@ -40,7 +40,7 @@ func (s *SkipList[K, V]) Get(key K) (*V, bool) {
 
 func (s *SkipList[K, V]) roll() int {
 	level := 0
-	for rand.Int() > 0 {
+	for rand.Intn(2)-1 > 0 {
 		level++
 	}
 	return level
@@ -170,5 +170,25 @@ func (s *SkipList[K, V]) floor(target K) *node[K, V] {
 }
 
 func main() {
-	fmt.Println("Hello world!")
+	// Initialize SkipList
+	list := SkipList[int, string]{head: &node[int, string]{}}
+
+	// Insert elements
+	list.Put(1, "One")
+	list.Put(2, "Two")
+	list.Put(3, "Three")
+
+	// Search for an element
+	if val, found := list.Get(2); found {
+		fmt.Println("Value found:", *val) // Output: Value found: Two
+	}
+
+	// Delete an element
+	list.Del(2)
+
+	// Range query
+	results := list.Range(1, 3)
+	for _, res := range results {
+		fmt.Println("Key:", res.Key, "Value:", res.Val)
+	}
 }
