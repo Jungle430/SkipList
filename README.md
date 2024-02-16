@@ -10,11 +10,11 @@ This repository contains a SkipList implementation in GoLang (version 1.21.4), f
 
 ## Key Features
 
-- Probabilistic Level Selection: The SkipList dynamically determines the number of levels for each node, ensuring balanced structure and logarithmic time complexity for operations.
+- **Probabilistic Level Selection**: The SkipList dynamically determines the number of levels for each node, ensuring balanced structure and logarithmic time complexity for operations.
 
-- Generic Support: Utilizes GoLang's generics to accommodate key-value pairs of any comparable type for keys (K) and any type for values (V), enhancing flexibility and reusability.
+- **Generic Support**: Utilizes GoLang's generics to accommodate key-value pairs of any comparable type for keys (**'K'**) and any type for values (**'V'**), enhancing flexibility and reusability.
 
-- Efficient Operations: Provides efficient search, insertion, deletion, and range query operations with logarithmic time complexity.
+- **Efficient Operations**: Provides efficient search, insertion, deletion, and range query operations with logarithmic time complexity.
 
 ---
 
